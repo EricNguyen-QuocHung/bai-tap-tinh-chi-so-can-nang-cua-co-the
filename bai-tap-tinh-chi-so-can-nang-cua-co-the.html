@@ -12,9 +12,9 @@
             console.log(calculatedBMI);
             let result = (calculatedBMI<18.5)?
                             "Underweight":
-                            (18.5<=calculatedBMI<25)?
-                                "Normal":                   // test with BMI. Weird???
-                                (25<=calculatedBMI<30)?
+                            (calculatedBMI<25)?
+                                "Normal":                  
+                                (calculatedBMI<30)?
                                     "Overweight":
                                     "Obese";
             alert(result);
