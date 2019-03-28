@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        function calculateBMI() {
+            let weight = parseFloat(document.getElementById("weight").value);
+            let height = parseFloat(document.getElementById("height").value);
+            let calculatedBMI = weight/(height*height);
+            alert("BMI = " + calculatedBMI);
+            console.log(calculatedBMI);
+            let result = (calculatedBMI<18.5)?
+                            "Underweight":
+                            (18.5<=calculatedBMI<25)?
+                                "Normal":                   // test with BMI. Weird???
+                                (25<=calculatedBMI<30)?
+                                    "Overweight":
+                                    "Obese";
+            alert(result);
+        }
+    </script>
+</head>
+<body>
+    <input id="weight" type="text" placeholder="can nang (kg)">
+    <input id="height" type="text" placeholder="chieu cao (met)">
+    <br><br>
+    <button type="button" value="Calculate BMI" onclick="calculateBMI()">CalculateBMI</button>
+</body>
+</html>
